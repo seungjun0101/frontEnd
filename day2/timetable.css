@@ -1,0 +1,19 @@
+/* 이승준 */
+table{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    border-collapse: collapse;
+}
+caption{
+    font-size: 1.5em ;
+    color: green;
+}
+th,td{ /* 선택자: td태그, 모든 td태그에 적용합니다. */
+    border:1px solid black;
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    width: 100px; ;
+}
+th {
+    background-color: aquamarine;
+}
