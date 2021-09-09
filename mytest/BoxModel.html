@@ -16,6 +16,21 @@
           border: 5px solid gray;
           margin: 0;
         }
+        /*  */
+        .flex-container {
+          width: 70%;
+          display: flex;
+          background-color: DodgerBlue;
+        }
+
+        .flex-container > div {
+          width: 30px;
+          background-color: #f1f1f1;
+          margin: 5px;
+          padding: 20px;
+          font-size: 30px;
+          border: 5px;
+        }
     </style>
 </head>
 
@@ -43,5 +58,13 @@
            flexbox 반응형 레이아웃을 쉽게 만들 수 있게 한다.
            ::주요 속성::  정리해 보세요.
  -->
+ <br>
+ <div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+
 </body>
 </html>
