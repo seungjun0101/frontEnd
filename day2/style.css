@@ -11,7 +11,7 @@ table {
 
     /* table에서 borber-spacing/collapse */
     border-spacing: 10px;     /* 테이블 칸(cell) 사이의 간격  */
-    border-collapse: collapse;/* 테이블 칸의 간격을 없애기 */
+    border-collapse: collapse;//테이블 칸의 간격을 없애기
     /* 위의 2개 중에 하나 설정해서 사용합니다. */
 
 }

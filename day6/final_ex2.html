@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+        table{
+            width: 100%;
+            border-spacing: 3px;
+            height: 100px;
+        }
+        .time{
+            width: 20%;
+            background-color: rgb(245, 110, 89);
+            font-weight: bold; /* 글자 굵게 */
+        }
+        td{ 
+            border : 1px solid black;
+            background-color: rgb(238, 201, 195);
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold; /* 글자 굵게 */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h2>시간표</h2>
+    <hr>
+    <table id="work">
+
+    </table>
+    <script>
+        // const time = ['09:00','11:00','12:30','14:00','16:45'] //시간
+        // const todo = ['수업','과제','점심식사','주간 회의','자료조사'] //할 일
+        const works =[ {time:'09:00',todo:'수업'},
+                       {time:'11:00',todo:'과제'},
+                       {time:'12:30',todo:'점심'},
+                       {time:'14:00',todo:'주간회의'},
+                       {time:'16:45',todo:'자료조사'},
+                      ]; //객체의 배열
+                      
+         //1) 배열이므로 forEach 메소드 사용             
+         //2) table 안의 tr 태그는 creaateElement로 만듭니다.
+         //3) td 태그의 내용은 배열의 객체 프로퍼티를 활용합니다. -> 탬플릿 문자열과 표현식을 사용합니다.
+         //4) 자식 요소 추가하는 appendChild 메소드 사용합니다.  
+        
+         works.forEach(function(value){ 
+            const $td = `
+            <td class='time'>${value.time}</td>
+            <td>${value.todo}</td>
+            `; 
+            const $work = document.getElementById('work');
+            const $tr = document.createElement('tr'); //새로운 요소 생성합니다. - tr
+            $tr.innerHTML = $td;
+            $work.appendChild($tr); //work에 자식노드 추가
+        });      
+    
+        
+
+        
+        
+
+    </script>
+</body>
+</html>
